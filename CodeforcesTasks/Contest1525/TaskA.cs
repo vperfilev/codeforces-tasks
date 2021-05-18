@@ -2,6 +2,7 @@
 
 namespace CodeforcesTasks.Contest1525
 {
+    // https://codeforces.com/contest/1525/problem/A
     public class TaskA
     {
         static void Main(string[] args)
