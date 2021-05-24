@@ -3,7 +3,7 @@
 namespace CodeforcesTasks.Contest1521
 {
     // https://codeforces.com/contest/1521/problem/A
-    public class TaskB
+    public class TaskA
     {
         static void Main(string[] args)
         {
