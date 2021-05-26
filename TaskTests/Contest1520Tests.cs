@@ -28,5 +28,19 @@ namespace TaskTests
             Assert.Equal(18, TaskB.FindSolution("100"));
             Assert.Equal(19, TaskB.FindSolution("120"));
         }
+        
+        [Fact]
+        public void TaskB2Test()
+        {   
+            Assert.Equal(1, TaskB2.FindSolution("1"));
+            Assert.Equal(2, TaskB2.FindSolution("2"));
+            Assert.Equal(3, TaskB2.FindSolution("3"));
+            Assert.Equal(4, TaskB2.FindSolution("4"));
+            Assert.Equal(5, TaskB2.FindSolution("5"));
+            Assert.Equal(10, TaskB2.FindSolution("20"));
+            Assert.Equal(17, TaskB2.FindSolution("95"));
+            Assert.Equal(18, TaskB2.FindSolution("100"));
+            Assert.Equal(19, TaskB2.FindSolution("120"));
+        }
     }
 }
