@@ -20,7 +20,7 @@ namespace CodeforcesTasks.Contest1520
             var addPoint = number[0];
             var letterPointer = 0;
             while (letterPointer < number.Length - 1 && number[letterPointer] == addPoint) letterPointer++;
-            return (number.Length - 1) * 9 + int.Parse(addPoint.ToString()) - (number[letterPointer] > addPoint ? 0 : 1);
+            return (number.Length - 1) * 9 + int.Parse(addPoint.ToString()) - (number[letterPointer] >= addPoint ? 0 : 1);
         }
     }
 }
