@@ -1,3 +1,4 @@
+using System;
 using CodeforcesTasks.Contest1520;
 using Xunit;
 
@@ -41,6 +42,15 @@ namespace TaskTests
             Assert.Equal(17, TaskB2.FindSolution("95"));
             Assert.Equal(18, TaskB2.FindSolution("100"));
             Assert.Equal(19, TaskB2.FindSolution("120"));
+        }
+
+        [Fact]
+        public void TaskDTest()
+        {
+            Assert.Equal(1, TaskD.FindSolution(Array.ConvertAll("3 5 1 4 6 6".Split(), int.Parse)));
+            Assert.Equal(3, TaskD.FindSolution(Array.ConvertAll("1 2 3".Split(), int.Parse)));
+            Assert.Equal(3, TaskD.FindSolution(Array.ConvertAll("1 3 3 4".Split(), int.Parse)));
+            Assert.Equal(10, TaskD.FindSolution(Array.ConvertAll("1 6 3 4 5 6".Split(), int.Parse)));
         }
     }
 }
