@@ -52,5 +52,15 @@ namespace TaskTests
             Assert.Equal(3, TaskD.FindSolution(Array.ConvertAll("1 3 3 4".Split(), int.Parse)));
             Assert.Equal(10, TaskD.FindSolution(Array.ConvertAll("1 6 3 4 5 6".Split(), int.Parse)));
         }
+
+        [Fact]
+        public void TaskETest()
+        {
+            Assert.Equal(1, TaskE.Solve("**.*.."));
+            Assert.Equal(0, TaskE.Solve("*****"));
+            Assert.Equal(0, TaskE.Solve(".*."));
+            Assert.Equal(0, TaskE.Solve("..."));
+            Assert.Equal(9, TaskE.Solve("*.*...*.**"));
+        }
     }
 }
