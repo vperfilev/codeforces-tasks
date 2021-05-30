@@ -6,30 +6,30 @@ namespace CodeforcesTasks.Contest1520
     {
         static void Main(string[] args)
         {
-            var size = int.Parse(Console.ReadLine()!.Split(' ')[0]);
+            var right = int.Parse(Console.ReadLine()!.Split(' ')[0]);
             var zeroNo = int.Parse(Console.ReadLine()!);
-            Solve(size, zeroNo, 1);
-        }
-
-        private static void Solve(int size, int zeroNo, int offset)
-        {
-            if (size == 1)
+            var left = 1;
+            
+            while (left < right)
             {
-                Console.WriteLine($"! {offset}");
-                return;
+                var middle = (left + right) / 2;
+                Console.WriteLine($"? {left} {middle}");
+                var elementSum = int.Parse(Console.ReadLine()!);
+                if (elementSum == -1) return;
+
+                var zeros = middle + 1 - left - elementSum;
+                if (zeros >= zeroNo)
+                {
+                    right = middle;
+                }
+                else
+                {
+                    left = middle + 1;
+                    zeroNo -= zeros;
+                }
             }
-            
-            var middle = size / 2;
-            Console.WriteLine($"? {offset} {offset + middle - 1}");
-            var elementSum = int.Parse(Console.ReadLine()!);
-            if (elementSum == -1)
-                return;
-            
-            var zeros = middle - elementSum;
-            if (zeros >= zeroNo)
-                Solve(middle, zeroNo, offset);
-            else
-                Solve(size - middle, zeroNo - zeros, offset + middle);
+
+            Console.WriteLine($"! {left}");
         }
     }
 }
