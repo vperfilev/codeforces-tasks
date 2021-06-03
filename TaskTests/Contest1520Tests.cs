@@ -62,5 +62,53 @@ namespace TaskTests
             Assert.Equal(0, TaskE.Solve("..."));
             Assert.Equal(9, TaskE.Solve("*.*...*.**"));
         }
+
+        [Fact]
+        public void TaskGTest()
+        {
+            var array = new [,]
+            {
+                {0, -1, 0, 1, -1},
+                {0, 20, 0, 0, -1},
+                {-1, -1, -1, -1, -1},
+                {3, 0, 0, 0, 0},
+                {-1, 0, 0, 0, 0}
+            };
+            
+            Assert.Equal((-1,6), TaskG.FindPath(array, (0,0), (4,4), 1));
+            Assert.Equal((-1,8), TaskG.FindPath(array, (4,4), (0,0), 1));
+
+            var array2 = new[,]
+            {
+                {0, -1},
+                {0, 10},
+                {8, 4},
+                {0, 0},
+                {0, 0},
+                {-1, 0},
+                {0, 0},
+                {0, 0},
+                {0, 0},
+                {4, 0},
+            };
+            Assert.Equal((20,10), TaskG.FindPath(array2, (0,0), (9,1), 2));
+            Assert.Equal((20,6), TaskG.FindPath(array2, (9,1), (0,0), 2));
+
+            var array3 = new[,]
+            {
+                {0, 0, 0, 1, 0, 0},
+                {-1, -1, 0, 0, 0, -1},
+                {9, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 3}
+            };
+            Assert.Equal((28,7), TaskG.FindPath(array3, (0,0), (9,5), 2));
+            Assert.Equal((28,3), TaskG.FindPath(array3, (9,5), (0,0), 2));
+        }
     }
 }
