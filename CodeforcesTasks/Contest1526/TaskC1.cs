@@ -9,40 +9,36 @@ namespace CodeforcesTasks.Contest1526
         
         static void Main(string[] args)
         {
-            Console.ReadLine();
-            var drinks = Read();
-            var result = Solve(drinks);
+            var size = int.Parse(Console.ReadLine()!);
+            var result = Solve(Read(), size);
             Console.WriteLine(result);
         }
 
-        public static long Solve(int[] drinks)
+        public static long Solve(int[] drinks,  int drinkCount)
         {
-            var dp = new long[drinks.Count() + 1, drinks.Count() + 1];
-            var drinkCount = 0;
-            for(drinkCount = 1; drinkCount <= drinks.Count(); drinkCount++)
+            var dp = new long[drinkCount + 1, drinkCount + 1];
+            for(var drinkNo = 1; drinkNo <= drinkCount; drinkNo++)
             {
-                var prev = long.MinValue;
-                var maxInLine = prev;
-                for(var position = drinkCount; position <= drinks.Count(); position++)
+                var prevHealth = long.MinValue;
+                var maxHealth = prevHealth;
+                
+                for(var position = drinkNo; position <= drinkCount; position++)
                 {			
-                    long newVal;
-                    if (dp[drinkCount - 1, position - 1] >= 0)
+                    if (dp[drinkNo - 1, position - 1] >= 0)
                     {
-                        newVal = drinks[position - 1] + dp[drinkCount - 1, position - 1];
-                    } else 
+                        var health = Math.Max(prevHealth, drinks[position - 1] + dp[drinkNo - 1, position - 1]);
+                        prevHealth = dp[drinkNo, position] = health;
+                        maxHealth = Math.Max(health, maxHealth);
+                    } 
+                    else 
                     {
-                        newVal = long.MinValue;
+                        dp[drinkNo, position] = prevHealth;
                     }
-                    var max = Math.Max(prev, newVal);
-                    dp[drinkCount, position] = max;
-                    prev = dp[drinkCount, position];
-                    maxInLine = Math.Max(max, maxInLine);
                 }
-                if(maxInLine < 0) 
-                    break;
+                if(maxHealth < 0) return --drinkNo;
             }
 	
-            return --drinkCount;
+            return drinkCount;
         }
     }
 }
