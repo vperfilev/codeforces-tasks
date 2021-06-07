@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace CodeforcesTasks.Contest1520
 {
+    // https://codeforces.com/contest/1520/problem/E
     public class TaskE
     {
         static void Main(string[] args)

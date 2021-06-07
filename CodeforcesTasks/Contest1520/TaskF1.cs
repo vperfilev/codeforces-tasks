@@ -4,6 +4,7 @@ namespace CodeforcesTasks.Contest1520
 {
     public class TaskF1
     {
+        // https://codeforces.com/contest/1520/problem/F1
         static void Main(string[] args)
         {
             var right = int.Parse(Console.ReadLine()!.Split(' ')[0]);

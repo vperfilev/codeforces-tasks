@@ -6,6 +6,7 @@ namespace CodeforcesTasks.Contest1520
 {
     public class TaskG
     {
+	    // https://codeforces.com/contest/1520/problem/G
 	    static int[] Read() => Array.ConvertAll(Console.ReadLine()!.Split(), int.Parse);
 	    
 	    static void Main(string[] args)

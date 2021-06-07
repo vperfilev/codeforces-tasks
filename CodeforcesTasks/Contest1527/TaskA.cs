@@ -4,6 +4,7 @@ namespace CodeforcesTasks.Contest1527
 {
     public class TaskA
     {
+        // https://codeforces.com/contest/1527/problem/A
         static void Main(string[] args)
         {
             var testNumber = int.Parse(Console.ReadLine()!);

@@ -4,6 +4,7 @@ namespace CodeforcesTasks.Contest1520
 {
     public class TaskF2
     {
+        // https://codeforces.com/contest/1520/problem/F2
         static int[] Read() => Array.ConvertAll(Console.ReadLine()!.Split(), int.Parse);
         static (int, int) Read2() { var a = Read(); return (a[0], a[1]); }
         
