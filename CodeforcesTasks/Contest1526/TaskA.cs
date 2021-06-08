@@ -4,6 +4,7 @@ namespace CodeforcesTasks.Contest1526
 {
     public class TaskA
     {
+        // https://codeforces.com/contest/1526/problem/A
         static int[] Read() => Array.ConvertAll(Console.ReadLine()!.Split(), int.Parse);
 
         static void Main(string[] args)
