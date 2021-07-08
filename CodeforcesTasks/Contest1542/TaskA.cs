@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace CodeforcesTasks.Contest1542
 {
+    // https://codeforces.com/contest/1542/problem/A
     public class TaskA
     {
         static int[] Read() => Array.ConvertAll(Console.ReadLine()!.Split(), int.Parse);
