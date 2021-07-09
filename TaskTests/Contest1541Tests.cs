@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using CodeforcesTasks.Contest1541;
-using Microsoft.VisualBasic;
+﻿using CodeforcesTasks.Contest1541;
 using Xunit;
 
 namespace TaskTests
@@ -16,6 +14,14 @@ namespace TaskTests
             Assert.Equal("3 1 2 5 4", string.Join(" ",TaskA.Solve(5)));
             Assert.Equal("2 1 4 3 6 5", string.Join(" ",TaskA.Solve(6)));
             Assert.Equal("3 1 2 5 4 7 6", string.Join(" ",TaskA.Solve(7)));
+        }
+
+        [Fact]
+        public void TaskBTest()
+        {
+            Assert.Equal(1, TaskB.Solve(new []{3, 1}));
+            Assert.Equal(1, TaskB.Solve(new []{6, 1, 5}));
+            Assert.Equal(3, TaskB.Solve(new []{3, 1, 5, 9, 2}));
         }
     }
 }
