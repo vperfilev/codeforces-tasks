@@ -1,4 +1,5 @@
-﻿using CodeforcesTasks.Contest1547;
+﻿using System.Threading.Tasks;
+using CodeforcesTasks.Contest1547;
 using Xunit;
 
 namespace TaskTests
@@ -34,5 +35,14 @@ namespace TaskTests
             Assert.False(TaskB.Solve("ddcba"));
         }
 
+        [Fact]
+        public void TaskCTest()
+        {
+            Assert.Equal("0 2 0 5", string.Join(" ",TaskC.Solve(new []{3, 2, 2}, new []{2, 0}, new []{0, 5})));
+            Assert.Equal("0 2 0 5 6", string.Join(" ",TaskC.Solve(new []{4, 3, 2}, new []{2, 0, 5}, new []{0, 6})));
+            Assert.Equal("-1", string.Join(" ",TaskC.Solve(new []{0, 2, 2}, new []{1, 0}, new []{2, 3})));
+            Assert.Equal("0 6 0 7 0 8 0 9", string.Join(" ",TaskC.Solve(new []{5, 4, 4}, new []{6, 0, 8, 0}, new []{0, 7, 0, 9})));
+            Assert.Equal("-1", string.Join(" ",TaskC.Solve(new []{5, 4, 1}, new []{8, 7, 8, 0}, new []{0})));
+        }
     }
 }
