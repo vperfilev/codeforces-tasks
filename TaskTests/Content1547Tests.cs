@@ -44,5 +44,15 @@ namespace TaskTests
             Assert.Equal("0 6 0 7 0 8 0 9", string.Join(" ",TaskC.Solve(new []{5, 4, 4}, new []{6, 0, 8, 0}, new []{0, 7, 0, 9})));
             Assert.Equal("-1", string.Join(" ",TaskC.Solve(new []{5, 4, 1}, new []{8, 7, 8, 0}, new []{0})));
         }
+
+        [Fact]
+        public void TaskETest()
+        {
+            Assert.Equal("15 14 15 16 16 17", string.Join(" ", TaskE.Solve(6, 2, new []{2, 5}, new [] {14, 16})));
+            Assert.Equal("36 35 34 33 32 31 30 31 32 33", string.Join(" ", TaskE.Solve(10, 1, new []{7}, new []{30})));
+            Assert.Equal("1 2 3 4 5", string.Join(" ", TaskE.Solve(5, 5, new []{3, 1, 4, 2, 5}, new []{3, 1, 4, 2, 5})));
+            Assert.Equal("1000000000 1000000001 1000000002 1000000003 1000000004 1000000005 1000000006", string.Join(" ", TaskE.Solve(7, 1, new []{1}, new []{1000000000})));
+            Assert.Equal("5 6 5 6 6 5", string.Join(" ", TaskE.Solve(6, 3, new []{6, 1, 3}, new []{5, 5, 5})));
+        }
     }
 }
