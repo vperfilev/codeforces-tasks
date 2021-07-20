@@ -24,5 +24,14 @@ namespace TaskTests
             Assert.Equal(0, TaskB.Solve(1, new [] {10000}));
             Assert.Equal(0, TaskB.Solve(7, new [] {1, 1, 1, 1, 1, 1, 1}));
         }
+
+        [Fact]
+        public void TaskCTest()
+        {
+            Assert.Equal(2, TaskC.Solve(3, 4, 7, new [] {5, 1, 2}));
+            Assert.Equal(7, TaskC.Solve(5, 5, 8, new [] { 5, 1, 2, 4, 3}));
+            Assert.Equal(0, TaskC.Solve(4, 100, 1000, new [] { 1, 1, 1, 1}));
+            Assert.Equal(1, TaskC.Solve(5, 9, 13, new [] { 2, 5, 5, 1, 1}));
+        }
     }
 }
