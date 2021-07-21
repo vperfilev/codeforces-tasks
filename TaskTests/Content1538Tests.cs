@@ -33,5 +33,53 @@ namespace TaskTests
             Assert.Equal(0, TaskC.Solve(4, 100, 1000, new [] { 1, 1, 1, 1}));
             Assert.Equal(1, TaskC.Solve(5, 9, 13, new [] { 2, 5, 5, 1, 1}));
         }
+
+        [Fact]
+        public void TaskETest()
+        {
+            var dataSet1 = new[]
+            {
+                "a := h",
+                "b := aha",
+                "c = a + b",
+                "c = c + c",
+                "e = c + c",
+                "d = a + c"
+            };
+            Assert.Equal(3, TaskE.Solve(dataSet1));
+
+            var dataSet2 = new[]
+            {
+                "x := haha",
+                "x = x + x",
+                "x = x + x",
+                "x = x + x",
+                "x = x + x",
+                "x = x + x",
+                "x = x + x",
+                "x = x + x",
+                "x = x + x",
+                "x = x + x",
+                "x = x + x",
+                "x = x + x",
+                "x = x + x",
+                "x = x + x",
+                "x = x + x"
+            };
+            Assert.Equal(32767, TaskE.Solve(dataSet2));
+            
+            Assert.Equal(0, TaskE.Solve(new []{"haha := hah"}));
+
+            var dataSet4 = new[]
+            {
+                "haahh := aaaha",
+                "ahhhh = haahh + haahh",
+                "haahh = haahh + haahh",
+                "ahhhh = ahhhh + haahh",
+                "ahhaa = haahh + ahhhh"
+            };
+            
+            Assert.Equal(0, TaskE.Solve(dataSet4));
+        }
     }
 }
