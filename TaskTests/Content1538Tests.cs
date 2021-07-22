@@ -81,5 +81,21 @@ namespace TaskTests
             
             Assert.Equal(0, TaskE.Solve(dataSet4));
         }
+
+        [Fact]
+        public void TaskDTest()
+        {
+            Assert.True(TaskD.Solve(36, 48, 2));
+            Assert.True(TaskD.Solve(36, 48, 3));
+            Assert.True(TaskD.Solve(36, 48, 4));
+            Assert.True(TaskD.Solve(2, 8, 1));
+            Assert.True(TaskD.Solve(2, 8, 2));
+            Assert.False(TaskD.Solve(1000000000, 1000000000, 1000000000));
+            Assert.True(TaskD.Solve(1, 2, 1));
+            Assert.False(TaskD.Solve(2, 2, 1));
+            Assert.False(TaskD.Solve(1, 1, 1));
+            Assert.True(TaskD.Solve(551326008, 826989012, 12));
+            
+        }
     }
 }
