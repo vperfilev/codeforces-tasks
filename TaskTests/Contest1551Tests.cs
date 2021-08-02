@@ -45,5 +45,16 @@ namespace TaskTests
             Assert.True(elapsedMilliseconds < 2000);
             Assert.Equal(string.Join(' ', Enumerable.Range(1, 200000).ToArray()), result);
         }
+
+        [Fact]
+        public void TaskCTest()
+        {
+            Assert.Equal(3, TaskC.Solve("bac", "aaada", "e")); 
+            Assert.Equal(2, TaskC.Solve("aba", "abcde", "aba")); 
+            Assert.Equal(0, TaskC.Solve("baba", "baba")); 
+            Assert.Equal(2, TaskC.Solve("ab", "ab", "c", "bc")); 
+            Assert.Equal(3, TaskC.Solve("cbdca", "d", "a", "d", "e")); 
+            Assert.Equal(2, TaskC.Solve("b", "c", "ca")); 
+        }
     }
 }
