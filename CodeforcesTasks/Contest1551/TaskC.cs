@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.VisualBasic;
 
 namespace CodeforcesTasks.Contest1551
 {
+    // https://codeforces.com/contest/1551/problem/C
     public class TaskC
     {
         static void Main(string[] args)

@@ -56,5 +56,23 @@ namespace TaskTests
             Assert.Equal(3, TaskC.Solve("cbdca", "d", "a", "d", "e")); 
             Assert.Equal(2, TaskC.Solve("b", "c", "ca")); 
         }
+
+        [Fact]
+        public void TaskDTest()
+        {
+            Assert.True(TaskD.Solve(4, 4, 2));
+            Assert.True(TaskD.Solve(2, 3, 0));
+            Assert.True(TaskD.Solve(3, 2, 3));
+            Assert.False(TaskD.Solve(1, 2, 0));
+            Assert.True(TaskD.Solve(2, 4, 2));
+            Assert.False(TaskD.Solve(5, 2, 2));
+            Assert.True(TaskD.Solve(2, 17, 16));
+            Assert.False(TaskD.Solve(2, 1, 1));
+            Assert.False(TaskD.Solve(100, 61, 3050));
+            Assert.False(TaskD.Solve(48, 9, 216));
+            Assert.False(TaskD.Solve(28, 23, 322));
+            Assert.False(TaskD.Solve(2, 7, 3));
+            Assert.True(TaskD.Solve(43, 16, 48));
+        }
     }
 }
