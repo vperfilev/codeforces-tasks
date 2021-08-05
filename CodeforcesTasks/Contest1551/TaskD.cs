@@ -34,4 +34,6 @@ namespace CodeforcesTasks.Contest1551
             return k >= horizontalSize && Solve(n - 1, m, k - horizontalSize);
         }
     }
+    
+    // https://codeforces.com/contest/1551/problem/D1
 }
