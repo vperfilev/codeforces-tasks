@@ -74,5 +74,14 @@ namespace TaskTests
             Assert.False(TaskD.Solve(2, 7, 3));
             Assert.True(TaskD.Solve(43, 16, 48));
         }
+
+        [Fact]
+        public void TaskETest()
+        {
+            Assert.Equal(1, TaskE.Solve(new []{1, 1, 2, 3, 4, 5, 6}, 6));
+            Assert.Equal(2, TaskE.Solve(new []{5, 1, 3, 2, 3}, 2));
+            Assert.Equal(-1, TaskE.Solve(new []{5, 5, 5, 5, 4}, 2));
+            Assert.Equal(2, TaskE.Solve(new []{1, 2, 3, 3, 2, 2, 5, 5}, 4));
+        }
     }
 }
