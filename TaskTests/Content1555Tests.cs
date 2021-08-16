@@ -1,4 +1,5 @@
-﻿using CodeforcesTasks.Contest1555;
+﻿using System.Threading.Tasks;
+using CodeforcesTasks.Contest1555;
 using Xunit;
 
 namespace TaskTests
@@ -26,12 +27,13 @@ namespace TaskTests
             Assert.Equal(0, TaskB.Solve((8, 10), (4, 5), (7, 8), (8, 5)));
             Assert.Equal(1, TaskB.Solve((1, 2), (0, 0), (1, 1), (1, 1)));
         }
-        
-        /*
-,
 
-         *
-         * 
-         */
+        [Fact]
+        public void TaskCTest()
+        {
+            Assert.Equal(7, TaskC.Solve(new []{1, 3, 7}, new []{3, 5, 1}));
+            Assert.Equal(8, TaskC.Solve(new []{1, 3, 9}, new []{3, 5, 1}));
+            Assert.Equal(0, TaskC.Solve(new []{4}, new []{7}));
+        }
     }
 }
