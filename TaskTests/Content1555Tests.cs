@@ -35,5 +35,15 @@ namespace TaskTests
             Assert.Equal(8, TaskC.Solve(new []{1, 3, 9}, new []{3, 5, 1}));
             Assert.Equal(0, TaskC.Solve(new []{4}, new []{7}));
         }
+
+        [Fact]
+        public void TaskDTest()
+        {
+            var sut = new TaskD.Solver("baacb");
+            Assert.Equal(1, sut.GetAnswer(1,3));
+            Assert.Equal(2, sut.GetAnswer(1, 5));
+            Assert.Equal(0, sut.GetAnswer(4, 5));
+            Assert.Equal(1, sut.GetAnswer(2, 3));
+        }
     }
 }
