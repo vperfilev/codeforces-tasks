@@ -24,6 +24,5 @@ namespace CodeforcesTasks.Contest1512
                 }
             }
         }
-
     }
 }
